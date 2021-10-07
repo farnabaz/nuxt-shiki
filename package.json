@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "nuxt dev"
+  },
+  "dependencies": {
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge",
+    "nuxt-edge": "^2.16.0-27226092.034b9901",
+    "shiki": "^0.9.11"
+  }
+}
