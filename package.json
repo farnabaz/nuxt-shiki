@@ -1,10 +1,17 @@
 {
   "scripts": {
-    "dev": "nuxt dev"
+    "dev": "nuxt dev",
+    "build": "NITRO_PRESET=cloudflare nuxt generate",
+    "start": "npx miniflare .output/server/index.mjs --site .output/public",
+    "postinstall": "patch-package"
   },
   "dependencies": {
-    "@nuxt/bridge": "npm:@nuxt/bridge-edge",
-    "nuxt-edge": "^2.16.0-27226092.034b9901",
+    "@nuxt/bridge": "npm:@nuxt/bridge-edge@latest",
+    "@rollup/pluginutils": "^4.1.1",
+    "@wemap/rollup-plugin-arraybuffer": "^0.1.2",
+    "base-64": "^1.0.0",
+    "nuxt-edge": "latest",
+    "patch-package": "^6.4.7",
     "shiki": "^0.9.11"
   }
 }

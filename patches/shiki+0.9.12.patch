@@ -1,0 +1,16 @@
+diff --git a/node_modules/shiki/dist/index.js b/node_modules/shiki/dist/index.js
+index 53f9e8a..68e455c 100644
+--- a/node_modules/shiki/dist/index.js
++++ b/node_modules/shiki/dist/index.js
+@@ -1518,9 +1518,9 @@ function visit(text, visitor, options) {
+  * Therefore, always check the errors list to find out if the input was valid.
+  */
+ var parse = parse$1;
+-
++const isCFWorker = typeof WebSocketPair !== 'undefined';
+ const isWebWorker = typeof self !== 'undefined' && typeof self.WorkerGlobalScope !== 'undefined';
+-const isBrowser = isWebWorker ||
++const isBrowser = isCFWorker || isWebWorker ||
+     (typeof window !== 'undefined' &&
+         typeof window.document !== 'undefined' &&
+         typeof fetch !== 'undefined');
